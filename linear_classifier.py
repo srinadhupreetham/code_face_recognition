@@ -132,7 +132,8 @@ def TestData(train_dict,k_eig_components,weight_matrix):
 		answer.append(pred_y)
 	return answer;
 
-train_dict,k_eig_components,losses_history,reduced_img,weight_matrix = Traindata(1000,0.00001,100);
+train_dict,k_eig_components,losses_history,reduced_img,weight_matrix = Traindata(1000,0.000001,100);
+print(losses_history)
 answer = TestData(train_dict,k_eig_components,weight_matrix);
 print(answer)
 with open('output_file.txt', 'w') as f:
